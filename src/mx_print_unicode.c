@@ -1,5 +1,6 @@
 #include "libmx.h"
 
+
 void mx_print_unicode(wchar_t c) {
 	if (c < 0x80 /* 128 */) {
 		char out[1]; /* 1 bytes  */

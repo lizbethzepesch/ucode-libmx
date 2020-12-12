@@ -1,9 +1,9 @@
 #include "libmx.h"
 int mx_strlen(const char *s){
-    int counter = 0;
+    int c = 0;
     while (*s){
         s++;
-        counter++;
+        c++;
     }
-    return counter;
+    return c; 
 }
