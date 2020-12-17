@@ -24,13 +24,8 @@ int mx_bubble_sort(char **arr, int size);
 char *mx_nbr_to_hex(unsigned long nbr);
 char* mx_itoa(int number);
 int mx_atoi(const char *str);
-
-
 int mx_quicksort(char**arr, int left, int right);
 void mx_print_unicode(wchar_t c);
-
-
-
 
 //String pack
 int mx_strlen(const char *s);
@@ -45,26 +40,29 @@ char *mx_strcpy(char *dst, const char *src);
 char *mx_strndup(const char *s1, size_t n);
 char *mx_strncpy(char *dst, const char *src, int len);
 int mx_strncmp(const char *s1, const char *s2, int n);
-
-
-
-
-
-
-
 char *mx_strstr(const char *haystack, const char *needle);
 int mx_get_substr_index(const char *str, const char *sub);
 int mx_count_substr(const char *str, const char *sub);
 int mx_count_words(const char *str, char c);
-
-
 char *mx_strtrim(const char *str);
+
+/*
+	mx_del_extra_spaces.c mx_strsplit.c mx_strjoin.c mx_file_to_str.c \
+	mx_replace_substr.c mx_memset.c mx_memcpy.c mx_memccpy.c mx_memcmp.c mx_memchr.c mx_memrchr.c \
+	mx_memmem.c mx_memmove.c mx_realloc.c mx_count_letters.c mx_multiple_number.c \
+	mx_create_node.c mx_push_front.c mx_push_back.c mx_pop_front.c mx_pop_back.c mx_list_size.c \
+	mx_sort_list.c
+*/
+
 char *mx_del_extra_spaces(const char *str);
 char **mx_strsplit(const char *s, char c);
 char *mx_strjoin(const char *s1, const char *s2);
 char *mx_file_to_str(const char *file);
 char *mx_replace_substr(const char *str, const char *sub, const char *replace);
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd);
+
+
+
 /*
 //Memory pack
 void *mx_memset(void *b, int c, size_t len);
@@ -107,16 +105,3 @@ int mx_max(int a, int b, int c);
 int mx_mid(int a, int b, int c);
 
 #endif
-/*
-
-mx_swap_char.c \
-		    mx_str_reverse.c mx_strdel.c mx_del_strarr.c mx_get_char_index.c mx_strdup.c mx_strndup.c\
-		    mx_strcpy.c mx_strncpy.c mx_strcmp.c mx_strncmp.c mx_strcat.c mx_strstr.c \
-		    mx_get_substr_index.c mx_count_substr.c mx_count_words.c mx_strnew.c mx_is_space.c \
-		    mx_strtrim.c mx_del_extra_spaces.c mx_strsplit.c mx_strjoin.c mx_file_to_str.c \
-		    mx_replace_substr.c mx_read_line.c mx_memset.c mx_memcpy.c mx_memccpy.c mx_memcmp.c mx_memchr.c mx_memrchr.c \
-		    mx_memmem.c mx_memmove.c mx_realloc.c mx_count_letters.c mx_is_odd.c mx_isalpha.c mx_isdigit.c \
-		    mx_islower.c mx_isupper.c mx_tolower.c mx_toupper.c mx_multiple_number.c mx_max.c mx_mid.c \
-		    mx_create_node.c mx_push_front.c mx_push_back.c mx_pop_front.c mx_pop_back.c mx_list_size.c \
-		    mx_sort_list.c
-*/

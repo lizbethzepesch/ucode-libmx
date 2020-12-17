@@ -10,9 +10,15 @@ OBJD	=	obj
 INC		=	libmx.h
 INCS	=	$(addprefix $(INCD)/, $(INC))
 
-SRC	= 	    mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c \
+SRC	= 	    mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_alphabet.c mx_quicksort.c \
 		    mx_print_strarr.c  mx_printint.c mx_pow.c mx_sqrt.c mx_nbr_to_hex.c mx_hex_to_nbr.c mx_itoa.c \
-		    mx_atoi.c mx_foreach.c mx_binary_search.c mx_strcmp.c mx_bubble_sort.c 
+		    mx_atoi.c mx_foreach.c mx_binary_search.c mx_strcmp.c mx_bubble_sort.c mx_swap_char.c \
+		    mx_str_reverse.c mx_strdel.c mx_del_strarr.c mx_get_char_index.c mx_strdup.c mx_strndup.c\
+		    mx_strcpy.c mx_strncpy.c mx_strncmp.c mx_strcat.c mx_strstr.c mx_strnew.c \
+			mx_is_odd.c mx_isalpha.c mx_isdigit.c mx_is_space.c mx_factorial_iter.c \
+			mx_islower.c mx_isupper.c mx_tolower.c mx_toupper.c mx_max.c mx_mid.c mx_sort_arr_int.c \
+			mx_get_substr_index.c mx_count_substr.c mx_count_words.c mx_strtrim.c \
+			mx_read_line.c mx_del_extra_spaces.c  \
 
 SRCS	=	$(addprefix $(SRCD)/, $(SRC))
 OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))
