@@ -64,18 +64,14 @@ void *mx_memchr(const void *s, int c, size_t n);
 void *mx_memrchr(const void *s, int c, size_t n);
 void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len);
 void *mx_memmove(void *dst, const void *src, size_t len);
-
 void *mx_realloc(void *ptr, size_t size);
 
-
-
-/*
 //List pack
 typedef struct s_list
 {
     void *data;
     struct s_list *next;
-} t_list;
+} 			   t_list;
 t_list *mx_create_node(void *data);
 void mx_push_front(t_list **list, void *data);
 void mx_push_back(t_list **list, void *data);
@@ -83,13 +79,9 @@ void mx_pop_front(t_list **head);
 void mx_pop_back(t_list **head);
 int mx_list_size(t_list *list);
 t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
-*/
 
-/*
-	mx_create_node.c mx_push_front.c mx_push_back.c mx_pop_front.c mx_pop_back.c mx_list_size.c \
-	mx_sort_list.c
-*/
 
+//Extra pack
 int mx_is_space(char c);
 bool mx_is_odd(int value);
 bool mx_isalpha(int c);
