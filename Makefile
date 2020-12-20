@@ -19,7 +19,8 @@ SRC	= 	    mx_printchar.c mx_strlen.c mx_print_unicode.c mx_printstr.c mx_print_
 			mx_islower.c mx_isupper.c mx_tolower.c mx_toupper.c mx_max.c mx_mid.c mx_sort_arr_int.c \
 			mx_get_substr_index.c mx_count_substr.c mx_count_words.c mx_strtrim.c mx_read_line.c \
 			mx_del_extra_spaces.c mx_strsplit.c mx_strjoin.c mx_file_to_str.c mx_replace_substr.c \
-			mx_memset.c mx_memcpy.c mx_memccpy.c mx_memcmp.c  \
+			mx_memset.c mx_memcpy.c mx_memccpy.c mx_memcmp.c mx_memchr.c mx_memrchr.c \
+			mx_memmem.c mx_memmove.c mx_realloc.c  \
 
 SRCS	=	$(addprefix $(SRCD)/, $(SRC))
 OBJS	=	$(addprefix $(OBJD)/, $(SRC:%.c=%.o))
