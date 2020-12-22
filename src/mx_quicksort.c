@@ -4,34 +4,33 @@ int mx_quicksort(char**arr, int left, int right){
     if (!arr)
         return -1;
 
+    if (left > right)
+        return -1;
+
     int count = 0;
-    int i = left;
-    int j = right;
-    int pivot = mx_strlen(arr[(i + j) >> 1]);
     char *temp;
 
-    while (i <= j) {
-        while (mx_strlen(arr[i]) < pivot)
-            i++;
-        while (mx_strlen(arr[j]) > pivot)
-            j--;
-            
-        if (i <= j) {
-            if(mx_strlen(arr[j]) != mx_strlen(arr[i])) {
-                temp = arr[i];
-                arr[i] = arr[j];
-                arr[j] = temp;
+    int l = left;
+    int r = right;
+    int pivot = mx_strlen(arr[(l + r) >> 1]);
+    while (l <= r) {
+        while (mx_strlen(arr[l]) < pivot < pivot) l++;
+        while (mx_strlen(arr[r]) > pivot) r--;
+        if (l <= r) {
+           if (mx_strlen(arr[r]) != mx_strlen(arr[l])) {
+                temp = arr[l];
+                arr[l] = arr[r];
+                arr[r] = temp;
                 count++;
             }
-            i++;
-            j--;
+            l++;
+            r--;
         }
-    }
-
-    if (j > left)
-        count += mx_quicksort(arr, left, j); 
-    if (i < right)
-        count += mx_quicksort(arr, i, right);
-
+    } 
+    if (r > l)
+        count += mx_quicksort(arr, l, r); 
+    if (l < r)
+        count += mx_quicksort(arr, l, r);
+    
     return count;
 }
