@@ -24,8 +24,8 @@ int mx_bubble_sort(char **arr, int size);
 char *mx_nbr_to_hex(unsigned long nbr);
 char* mx_itoa(int number);
 int mx_atoi(const char *str);
-
 int mx_quicksort(char**arr, int left, int right);
+
 void mx_print_unicode(wchar_t c);
 
 //String pack
@@ -50,8 +50,8 @@ char *mx_del_extra_spaces(const char *str);
 char **mx_strsplit(const char *s, char c);
 char *mx_strjoin(const char *s1, const char *s2);
 char *mx_replace_substr(const char *str, const char *sub, const char *replace);
-
 char *mx_file_to_str(const char *file);
+
 int mx_read_line(char **lineptr, size_t buf_size, char delim, const int fd);
 
 
