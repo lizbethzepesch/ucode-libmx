@@ -6,7 +6,7 @@
 #include <stdbool.h>
 #include <fcntl.h>
 #include <stdio.h>
-//#include <malloc/malloc.h>
+#include <malloc/malloc.h>
 
 // Utils pack
 
@@ -80,6 +80,7 @@ t_list *mx_sort_list(t_list *lst, bool (*cmp)(void *, void *));
 
 
 //Extra pack
+char *mx_strcat(char *restrict s1, const char *restrict s2);
 int mx_is_space(char c);
 bool mx_is_odd(int value);
 bool mx_isalpha(int c);

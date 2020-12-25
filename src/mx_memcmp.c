@@ -4,7 +4,7 @@ int mx_memcmp(const void *s1, const void *s2, size_t n){
     const unsigned char *res1 = s1;
     const unsigned char *res2 = s2;
     
-    int i = 0;
+    size_t i = 0;
     if (!n)
         return 0;
     else 

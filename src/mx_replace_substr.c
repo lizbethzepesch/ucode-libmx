@@ -20,30 +20,3 @@ char *mx_replace_substr(const char *str, const char *sub, const char *replace) {
     }
     return res;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	
-	
-
-	
-
-	for (int i = 0; i < len; i++, str++) {
-        
-    }
-
-    return memory;

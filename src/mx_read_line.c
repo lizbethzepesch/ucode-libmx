@@ -6,7 +6,7 @@ int mx_read_line(char **lineptr, size_t c_size, char delim, const int fd) {
 
     (*lineptr) = (char *) mx_realloc(*lineptr, c_size);
     mx_memset((*lineptr), '\0', malloc_size((*lineptr))); 
-    int bytes = 0;
+    size_t bytes = 0;
     char c;
 
     if (read(fd, &c, 1)) {

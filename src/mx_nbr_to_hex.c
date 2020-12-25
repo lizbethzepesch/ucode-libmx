@@ -1,10 +1,13 @@
 #include "libmx.h"
 
 char *mx_nbr_to_hex(unsigned long nbr){
-    if(!nbr) return 0;
-    char res[55];
+    
+    char *res = NULL;
     char arr[55];
     int i = 0;
+    res = malloc(55);
+
+    if(!nbr) return mx_strcpy(res, "0");
 
     for (int temp = 0; nbr; i++) {    
         temp = nbr % 16; 
@@ -19,10 +22,3 @@ char *mx_nbr_to_hex(unsigned long nbr){
 
     return res;
 }
-/*
-#include "stdio.h"
-int main(){
-    printf("%s", mx_nbr_to_hex(52));
-    return 0;
-}
-*/
