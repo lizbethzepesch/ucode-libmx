@@ -7,20 +7,20 @@ int mx_quicksort(char**arr, int left, int right){
     int count = 0;
     int l = left;
     int r = right;
-    int mid = mx_strlen(arr[(l + r) >> 1]);
-    char *arr;
+    int pivot = mx_strlen(arr[(l + r) >> 1]);
+    char *swap;
 
     while (l <= r) {
-        while (mx_strlen(arr[l]) < mid)
+        while (mx_strlen(arr[l]) < pivot)
             l++;
-        while (mx_strlen(arr[r]) > mid)
+        while (mx_strlen(arr[r]) > pivot)
             r--;
             
         if (l <= r) {
             if(mx_strlen(arr[r]) != mx_strlen(arr[l])) {
-                arr = arr[l];
+                swap = arr[l];
                 arr[l] = arr[r];
-                arr[r] = arr;
+                arr[r] = swap;
                 count++;
             }
             l++;
