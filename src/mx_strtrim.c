@@ -8,8 +8,7 @@ char *mx_strtrim(const char *str) {
 
     int len = mx_strlen(str);
 
-    while (mx_is_space(str[len - 1]))
-        len--;
+    for (;mx_is_space(str[len - 1]); len--);
 
     return mx_strndup(str, len);
 }

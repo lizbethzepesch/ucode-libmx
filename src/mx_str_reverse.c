@@ -3,7 +3,7 @@
 void mx_str_reverse(char *s){
     if (!s)
         return;
-
-    for (int i = 0; i < (mx_strlen(s) - 1) / 2; i++)
-        mx_swap_char(&s[i], &s[mx_strlen(s) - i - 1]);
+    
+    for (int i = 0, len = mx_strlen(s) - 1; i <= len / 2; i++)
+        mx_swap_char(&s[i], &s[len - i]);
 }
