@@ -8,7 +8,7 @@ char *mx_del_extra_spaces(const char *str){
     char *res = NULL;
  
     arr = mx_strnew(mx_strlen(str));
-    for (int i = 0, j = 0;;str[i]; i++) {
+    for (int i = 0, j = 0;str[i]; i++) {
         if (!(mx_is_space(str[i]))) {
             arr[j] = str[i];
             j++;

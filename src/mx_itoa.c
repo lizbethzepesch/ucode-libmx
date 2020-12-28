@@ -3,12 +3,11 @@
 char *mx_itoa(int number) {
     int n = number;
 	int length = 0;
-    for (; n; length++)
-        n /= 10;
-    
 	int tmp = number;
 	char *result = NULL;
-
+    for (; n; length++){
+        n /= 10;
+	}
 	result = mx_strnew(length);
 	if (number == 0)
 		return mx_strcpy(result, "0");
