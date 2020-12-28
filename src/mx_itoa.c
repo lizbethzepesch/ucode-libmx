@@ -3,7 +3,7 @@
 char *mx_itoa(int number) {
     int n = number;
 	int length = 0;
-    for (; number; length++)
+    for (; n; length++)
         n /= 10;
     
 	int tmp = number;
