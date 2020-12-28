@@ -1,24 +1,28 @@
 #include "libmx.h"
 
+char *mx_itoa(int number) {
+    int n = number;
+	int length = 0;
+    for (; number; length++)
+        n /= 10;
+    
+	int tmp = number;
+	char *result = NULL;
 
-char* mx_itoa(int number){
-    int length = 0;
-    int num = number;
-    int minus = number < 0;
-
-	for (;num; length++) 
-		num /= 10;
-
-    if(minus) {
-        length++;
-	    number *= -1;
-    }
-    char *arr = mx_strnew(length);
-
-    for (int i = length - 1; number; number /= 10, i--, length--){
-        arr[i] = (number % 10) + 48;
-    }    
-    if(minus)
-        arr[0] = '-';
-    return arr;
+	result = mx_strnew(length);
+	if (number == 0)
+		return mx_strcpy(result, "0");
+	if (number == -2147483648)
+		return mx_strcpy(result, "-2147483648");
+	tmp = number;
+	for (int i = 0; i < length; i++) {
+		if (tmp < 0) {
+			result[length] = '-';
+			tmp = -tmp;
+		}
+		result[i] = (tmp % 10) + '0';
+		tmp /= 10;
+	}
+	mx_str_reverse(result);
+	return result;
 }

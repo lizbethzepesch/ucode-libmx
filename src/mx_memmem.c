@@ -1,21 +1,16 @@
 #include "libmx.h"
 
 void *mx_memmem(const void *big, size_t big_len, const void *little, size_t little_len){
-    char *cur, *last;
-	const char *copy_big = (const char *)big;
-	const char *copy_little = (const char *)little;
+    
+	unsigned char *position = NULL;
+	unsigned char *arr = NULL;
 
-	if (!big_len || !little_len || (big_len < little_len))
-		return NULL;
-
-	if (little_len == 1)
-		return mx_memchr(big, (int)*copy_little, big_len);
-
-	last = (char *)copy_big + big_len - little_len;
-
-	for (cur = (char *)copy_big; cur <= last; cur++)
-		if (cur[0] == copy_little[0] && !mx_memcmp(cur, copy_little, little_len))
-			return cur;
-
+	if (big_len >= little_len && big_len > 0 && little_len > 0) {
+		position = (unsigned char *)big;
+		arr = (unsigned char *)little;
+		for (; *position; position++) 
+			if (!mx_memcmp(position, arr, little_len - 1))
+				return position;
+	}
 	return NULL;
 }
